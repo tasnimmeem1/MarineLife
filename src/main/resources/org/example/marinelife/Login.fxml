@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefWidth="1100"
+            prefHeight="760"
+            stylesheets="@style.css"
+            styleClass="login-root"
+            xmlns="http://javafx.com/javafx/23"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.marinelife.LoginController">
+
+    <center>
+        <VBox alignment="CENTER"
+              spacing="20"
+              maxWidth="420"
+              maxHeight="430"
+              styleClass="login-panel">
+
+            <Label text="MARINE LIFE"
+                   styleClass="login-title"/>
+
+            <Label text="Explore the world beneath the waves"
+                   styleClass="login-subtitle"/>
+
+            <GridPane alignment="CENTER"
+                      hgap="15"
+                      vgap="18">
+
+                <Label text="Username"
+                       styleClass="login-label"
+                       GridPane.columnIndex="0"
+                       GridPane.rowIndex="0"/>
+
+                <TextField promptText="Enter username"
+                           prefWidth="220"
+                           GridPane.columnIndex="1"
+                           GridPane.rowIndex="0"/>
+
+                <Label text="Password"
+                       styleClass="login-label"
+                       GridPane.columnIndex="0"
+                       GridPane.rowIndex="1"/>
+
+                <PasswordField promptText="Enter password"
+                               prefWidth="220"
+                               GridPane.columnIndex="1"
+                               GridPane.rowIndex="1"/>
+            </GridPane>
+
+            <Button text="Sign in"
+                    onAction="#openGallery"
+                    prefWidth="180"
+                    styleClass="login-button"/>
+        </VBox>
+    </center>
+</BorderPane>
