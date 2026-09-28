@@ -1,0 +1,289 @@
+/* General */
+
+.root {
+    -fx-font-family: "Trebuchet MS", Arial, sans-serif;
+    -fx-font-size: 14px;
+}
+
+.button {
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+}
+
+
+/* Splash screen */
+
+.splash-overlay {
+    -fx-background-color: rgba(1, 19, 39, 0.62);
+}
+
+.splash-content {
+    -fx-alignment: center;
+    -fx-padding: 45;
+    -fx-background-color: rgba(2, 34, 56, 0.55);
+    -fx-background-radius: 30;
+}
+
+.splash-eyebrow {
+    -fx-font-family: "Trebuchet MS";
+    -fx-text-fill: #8ffff0;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+.splash-heading {
+    -fx-font-family: "Georgia";
+    -fx-text-fill: white;
+    -fx-font-size: 76px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, black, 20, 0.7, 0, 4);
+}
+
+.splash-description {
+    -fx-font-family: "Trebuchet MS";
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
+    -fx-line-spacing: 6;
+    -fx-effect: dropshadow(gaussian, black, 8, 0.8, 0, 2);
+}
+
+.dive-button {
+    -fx-font-family: "Trebuchet MS";
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+
+    -fx-background-color:
+            #005c91,
+            linear-gradient(to bottom, #1bd0e5, #009bc1 55%, #00749f),
+            linear-gradient(to bottom, #a0f5f7, #40d8e8);
+
+    -fx-background-insets: 0, 5, 9 15 49 15;
+    -fx-background-radius: 50;
+
+    -fx-border-color: #003f79;
+    -fx-border-width: 3;
+    -fx-border-radius: 50;
+
+    -fx-padding: 20 48;
+    -fx-effect: dropshadow(gaussian, #001e3b99, 13, 0.4, 0, 6);
+}
+
+.dive-button:hover {
+    -fx-effect: dropshadow(gaussian, #64f7ff, 22, 0.6, 0, 3);
+}
+
+.dive-button:pressed {
+    -fx-translate-y: 3;
+    -fx-effect: dropshadow(gaussian, #001e3b77, 5, 0.3, 0, 2);
+}
+
+
+/* Login screen */
+.login-root {
+    -fx-background-image: url("Login.jpeg");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+.login-panel {
+    -fx-alignment: center;
+    -fx-padding: 35;
+    -fx-background-color: rgba(4, 35, 51, 0.78);
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, #001b2d99, 18, 0.3, 0, 6);
+}
+
+.login-title {
+    -fx-font-family: "Georgia";
+    -fx-text-fill: white;
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+}
+
+.login-subtitle {
+    -fx-text-fill: #c6fff4;
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+}
+
+.login-label {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.text-field,
+.password-field {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-color: #8ddedb;
+    -fx-border-radius: 10;
+    -fx-border-width: 2;
+    -fx-padding: 11;
+}
+
+.text-field:focused,
+.password-field:focused {
+    -fx-border-color: #16c9c6;
+}
+
+.login-button {
+    -fx-background-color: #46c7bf;
+    -fx-background-radius: 25;
+    -fx-text-fill: #07354b;
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-padding: 12 30;
+}
+
+.login-button:hover {
+    -fx-background-color: #8be8db;
+}
+
+
+/* Landing screen */
+
+.app-root {
+    -fx-background-color: #eff8f9;
+}
+
+.content-scroll,
+.content-scroll > .viewport {
+    -fx-background-color: #eff8f9;
+}
+
+.topbar {
+    -fx-background-color: white;
+    -fx-padding: 16 26;
+    -fx-effect: dropshadow(gaussian, #07354b33, 9, 0, 0, 2);
+}
+
+.brand {
+    -fx-text-fill: #086a78;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.menu-button {
+    -fx-background-color: #e4f5f3;
+    -fx-background-radius: 10;
+    -fx-text-fill: #075e70;
+    -fx-font-size: 20px;
+    -fx-padding: 5 13;
+}
+
+.menu-button:hover {
+    -fx-background-color: #c7eeea;
+}
+
+.sidebar {
+    -fx-background-color: #0a4055;
+    -fx-padding: 24 14;
+}
+
+.sidebar-caption {
+    -fx-text-fill: #a8d5d9;
+    -fx-font-size: 12px;
+    -fx-padding: 0 8 6 8;
+}
+
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+    -fx-background-radius: 10;
+    -fx-padding: 12;
+}
+
+.nav-button:hover {
+    -fx-background-color: #17677a;
+}
+
+.content-scroll {
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.content {
+    -fx-padding: 34;
+}
+
+.heading {
+    -fx-font-family: "Georgia";
+    -fx-text-fill: #113b50;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
+
+.section-heading {
+    -fx-text-fill: #113b50;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+.muted,
+.description {
+    -fx-text-fill: #597680;
+}
+
+.description {
+    -fx-font-size: 17px;
+    -fx-line-spacing: 5;
+}
+
+
+/* Marine life cards and detail view */
+
+.marine-card,
+.detail-card {
+    -fx-background-color: white;
+    -fx-background-radius: 18;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(gaussian, #07354b33, 12, 0, 0, 5);
+}
+
+.detail-card {
+    -fx-padding: 35;
+}
+
+.card-title {
+    -fx-font-size: 21px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #153e50;
+}
+
+.tag {
+    -fx-text-fill: #087e91;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+.image-placeholder {
+    -fx-background-color: linear-gradient(
+            to bottom right, #1c8598, #78d3bd
+    );
+    -fx-background-radius: 12;
+    -fx-alignment: center;
+}
+
+.placeholder-label {
+    -fx-text-fill: white;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
+}
+
+.secondary-button {
+    -fx-background-color: #e4f5f3;
+    -fx-background-radius: 10;
+    -fx-text-fill: #096e79;
+    -fx-padding: 11 17;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #c7eeea;
+}
