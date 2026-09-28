@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane prefWidth="1100"
+            prefHeight="760"
+            stylesheets="@style.css"
+            styleClass="app-root"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.marinelife.WelcomeController">
+
+    <top>
+        <HBox alignment="CENTER_LEFT"
+              spacing="16"
+              styleClass="topbar">
+
+
+            <Label text="◈  Marine Life Explorer"
+                   styleClass="brand"/>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Button text="Log out"
+                    onAction="#logOut"
+                    styleClass="secondary-button"/>
+        </HBox>
+    </top>
+
+    <left>
+        <VBox fx:id="sidebar"
+              spacing="12"
+              prefWidth="205"
+              styleClass="sidebar">
+
+            <Label text="EXPLORE"
+                   styleClass="sidebar-caption"/>
+
+            <Button text="All Marine Life"
+                    onAction="#showAll"
+                    styleClass="nav-button"
+                    maxWidth="Infinity"/>
+
+            <Button text="Animals"
+                    onAction="#showAnimals"
+                    styleClass="nav-button"
+                    maxWidth="Infinity"/>
+
+            <Button text="Plants"
+                    onAction="#showPlants"
+                    styleClass="nav-button"
+                    maxWidth="Infinity"/>
+        </VBox>
+    </left>
+
+    <center>
+        <ScrollPane fitToWidth="true"
+                    styleClass="content-scroll">
+
+            <VBox spacing="18" styleClass="content">
+
+                <VBox fx:id="galleryView" spacing="18">
+                    <Label text="Discover life beneath the waves"
+                           styleClass="heading"
+                           wrapText="true"/>
+
+                    <Label text="Choose a category on the left, then open a card to learn more."
+                           styleClass="muted"
+                           wrapText="true"/>
+
+                    <Label fx:id="sectionTitle"
+                           text="All Marine Life"
+                           styleClass="section-heading"/>
+
+                    <TilePane fx:id="cards"
+                              hgap="18"
+                              vgap="18"
+                              prefTileWidth="270"/>
+                </VBox>
+
+                <VBox fx:id="detailView"
+                      visible="false"
+                      managed="false"
+                      spacing="16"
+                      styleClass="detail-card">
+
+                    <Button text="← Back to gallery"
+                            onAction="#backToGallery"
+                            styleClass="secondary-button"/>
+
+                    <StackPane fx:id="detailImage"/>
+
+                    <Label fx:id="detailCategory"
+                           styleClass="tag"/>
+
+                    <Label fx:id="detailName"
+                           styleClass="heading"/>
+
+                    <Label fx:id="detailDescription"
+                           wrapText="true"
+                           styleClass="description"/>
+                </VBox>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>
